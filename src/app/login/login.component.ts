@@ -10,16 +10,24 @@ import { AuthService } from '../services/auth.service';
     ReactiveFormsModule
   ],
   template: `
-    <section class="listing-apply">
-        <h2 class="section-heading">Apply now to live here</h2>
-        <form [formGroup]="applyForm" (submit)="submitApplication()">
-
-          <label for="email">Email</label>
-          <input id="email" type="email" formControlName="email">
-          <label for="password">Password</label>
-          <input id="password" type="text" formControlName="password">
-          <button type="submit" class="primary">Apply now</button>
-        </form>
+    <section class="container">
+        <div class="card">
+          <img class= "logo" src="https://miit.ru/content/T_rus.svg?id_wm=867987" alt="Транспортный университет">
+          <form [formGroup]="applyForm" (submit)="submitApplication()">
+            <label for="email">Почта</label>
+            <input id="email" type="email" formControlName="email">
+            <label for="password">Пароль</label>
+            <input id="password" type="text" formControlName="password">
+            <div style="text-align:center">
+              
+                <button type="submit" class="log-btn">Войти</button>
+            </div>
+            <div style="margin-top: 50px;">
+              <p style="text-align: center;">Забыли пароль?</p>
+              <p style="text-align: center;">Нет учетной записи? Зарегистрироваться</p>
+            </div>
+          </form>
+        </div>
       </section>
   `,
   styleUrl: './login.component.scss'

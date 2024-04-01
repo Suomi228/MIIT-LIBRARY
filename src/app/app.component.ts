@@ -8,9 +8,6 @@ import { LoginComponent } from './login/login.component';
   imports: [LoginComponent],
   template: `
   <main class="body">
-    <header class="brand-name">
-      <img class="brand-logo" src="/assets/logo.svg" alt="logo" aria-hidden="true">
-    </header>
     <section class="content">
       <app-login></app-login>
     </section>
