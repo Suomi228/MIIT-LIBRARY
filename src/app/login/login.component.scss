@@ -1,0 +1,21 @@
+html, body {
+    margin: 0;
+    padding: 0;
+  }
+.card{
+    width: 300px;
+    height: 600px;
+    border-style: solid;
+    border-radius: 30px;
+    justify-content: end;
+    
+
+}
+.container{
+    display: flex;
+    background-color: aqua;
+    justify-content: center;
+     margin: 0;
+
+
+}
