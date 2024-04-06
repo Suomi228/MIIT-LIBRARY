@@ -3,13 +3,14 @@ import {UserLogin} from "./user";
 import {JwtToken} from "./jwtToken";
 import {HttpClient} from "@angular/common/http";
 import {BASE_API_URL} from "../constants";
+import {Router} from "@angular/router";
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient, private router: Router) {
   }
 
   private postNoAuth(packet: any, endpoint: string) {
@@ -21,7 +22,8 @@ export class AuthService {
     this.postNoAuth(new UserLogin(email, password), 'auth/authentication')
       .subscribe({
       next: (token) => {
-        console.log(`Token received: ${token.token}`);
+        console.log(`Token received: ${token.token}  ${token.role}`);
+        this.router.navigate(['/home']);
       },
       error: (error) => {
         // выводит код ошибки, тут обычно 403 если неправильный логин или пароль
