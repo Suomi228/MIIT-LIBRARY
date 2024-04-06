@@ -33,9 +33,12 @@ label {
   padding-right: 50px;
   font-size: 20px;
   background-color: #163E73;
+  cursor: pointer;
 }
-.log-btn:hover{
+
+.log-btn:active{
   background-color: #3d71b4;
+
 }
 input {
   font-size: 16pt;
