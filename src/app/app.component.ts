@@ -6,7 +6,7 @@ import {RouterOutlet} from "@angular/router";
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [LoginComponent, RouterOutlet],
+  imports: [RouterOutlet],
   template: `
   <main class="body">
     <section class="content">

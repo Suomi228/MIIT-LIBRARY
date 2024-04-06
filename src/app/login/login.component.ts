@@ -46,7 +46,6 @@ export class LoginComponent {
   applyForm = new FormGroup({
     email: new FormControl(''),
     password: new FormControl('')
-
   });
 
   constructor() {
