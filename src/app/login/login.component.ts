@@ -27,8 +27,8 @@ import {HttpClientModule} from "@angular/common/http";
             <label for="password">Пароль</label>
             <input id="password" type="primary" formControlName="password">
             <div style="text-align:center">
-              <button mat-flat-button color="primary">Войти</button>
-<!--                <button type="submit" class="log-btn">Войти</button>-->
+              <!-- <button mat-flat-button color="primary">Войти</button> -->
+               <button type="submit" class="log-btn">Войти</button>
             </div>
             <div style="margin-top: 50px;">
               <p style="text-align: center;">Забыли пароль?</p>
