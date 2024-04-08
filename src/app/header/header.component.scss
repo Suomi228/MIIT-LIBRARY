@@ -12,7 +12,7 @@ img{
     height: 70px;
 }
 
-a{
+.topnav>a{
     border-style: bold;
     border: solid;
     margin-top: 2em;
@@ -20,4 +20,8 @@ a{
     padding-left: 2em;
     font-size: 1em;
     text-decoration: none;
+    color: gray;
+}
+.topnav>a:focus {
+    color: #163E73;
 }

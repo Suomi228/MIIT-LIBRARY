@@ -17,7 +17,7 @@ import { HeaderComponent } from './header/header.component';
     
 <!--      <app-login></app-login>-->
       <!-- <app-home-page></app-home-page> -->
-      <!-- <app-catalogue></app-catalogue> -->
+      <app-catalogue></app-catalogue>
     </section>
   </main>
 `,
