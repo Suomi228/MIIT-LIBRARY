@@ -1,0 +1,15 @@
+<div style="display: flex;">
+  <div style="flex: 1;">
+    <mat-checkbox *ngFor="let checkbox of checkboxes">{{ checkbox }}</mat-checkbox>
+  </div>
+  <div style="flex: 3; overflow-y: auto; max-height: 100vh;">
+    <mat-grid-list cols="2" rowHeight="1:1" gutterSize="10px">
+      <mat-grid-tile *ngFor="let card of cards">
+        <mat-card style="width: 90%; height: 90%">
+          <mat-card-title>{{ card.title }}</mat-card-title>
+          <mat-card-content>{{ card.description }}</mat-card-content>
+        </mat-card>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+</div>
