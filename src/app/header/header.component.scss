@@ -1,0 +1,23 @@
+.topnav {
+    display: flex;
+    position: sticky;
+    top: 0;
+    align-self: start;
+    background-color: #ffffff;
+    border-bottom-style: solid;
+    border-width: 0.5px;
+}
+img{
+    width: 150px;
+    height: 70px;
+}
+
+a{
+    border-style: bold;
+    border: solid;
+    margin-top: 2em;
+    margin-bottom: 1em;
+    padding-left: 2em;
+    font-size: 1em;
+    text-decoration: none;
+}
