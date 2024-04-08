@@ -12,9 +12,5 @@ import { CatalogueComponent } from '../catalogue/catalogue.component';
 })
 export class HeaderComponent {
 
-  constructor( private router: Router){}
-  openPage(route:string){
-    this.router.navigate([route]);
-  }
-  
+
 }

@@ -15,9 +15,7 @@ import { HeaderComponent } from './header/header.component';
   <app-header></app-header>
     <section class="content">
     
-<!--      <app-login></app-login>-->
-      <!-- <app-home-page></app-home-page> -->
-      <app-catalogue></app-catalogue>
+    <router-outlet></router-outlet>
     </section>
   </main>
 `,
