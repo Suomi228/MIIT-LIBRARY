@@ -6,6 +6,7 @@ import {CatalogueComponent} from "./catalogue/catalogue.component";
 export const routes: Routes = [
   // obama.tplinkdns.com + path
   { path: "home" ,component: HomePageComponent },
-  { path: "" ,component: LoginComponent },
+  { path: "login" ,component: LoginComponent },
+  { path: "" ,component: HomePageComponent },
   {path: "catalogue", component: CatalogueComponent},
 ];
