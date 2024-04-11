@@ -7,6 +7,7 @@ import {NgForOf} from "@angular/common";
 import {GetBookResponse} from "../catalogue/requests/getBookRequest";
 import {BookService} from "../services/book.service";
 import {HttpClientModule} from "@angular/common/http";
+import { BorrowedBooksService } from '../services/borrowed-books.service';
 
 @Component({
   selector: 'app-catalogue',
@@ -27,7 +28,7 @@ import {HttpClientModule} from "@angular/common/http";
   providers: [BookService]
 })
 export class CatalogueComponent {
-  constructor(private router: Router, private bookService: BookService) {
+  constructor(private router: Router, private bookService: BookService, private bBook: BorrowedBooksService) {
   }
 
   cards: GetBookResponse[] = [];
@@ -41,6 +42,9 @@ export class CatalogueComponent {
       console.log(response);
       this.cards = response.books;
     });
+  }
+  addBook(name: string){
+    this.bBook.addBook(name);
   }
 
   checkboxes = ['Checkbox 1', 'Checkbox 2', 'Checkbox 3', 'Checkbox 4', 'Checkbox 5'];

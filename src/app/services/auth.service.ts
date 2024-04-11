@@ -33,7 +33,7 @@ export class AuthService {
         next: (token) => {
           console.log(`Token received: ${token.token}  ${token.role}`);
           localStorage.setItem('token', token.token);
-          this.router.navigate(['/catalogue']);
+          this.router.navigate(['/home']);
         },
         error: (error) => {
           // выводит код ошибки, тут обычно 403 если неправильный логин или пароль
