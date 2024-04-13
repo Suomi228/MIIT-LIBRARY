@@ -11,10 +11,12 @@ export class BorrowedBooksService {
 
   constructor(private http: HttpClient) { }
 
+  cards: CreateLoanResponse[] = [];
+
   addBook(){
-    let zalupa=new CreateLoanResponse(1);
-    console.log(zalupa.bookId);
-    this.createLoan(zalupa).subscribe({
+    let loan=new CreateLoanResponse(1);
+    console.log(loan.bookId);
+    this.createLoan(loan).subscribe({
       next: (token) => {
         console.log("tts");
       },
@@ -29,8 +31,8 @@ export class BorrowedBooksService {
     console.log("created loan")
     return this.http.post<{ books: GetBookResponse[] }>(BASE_API_URL + "loan/create",createLoanResponse, {headers: headers});
   }
-  getLoan(packet: any, endpoint: string) {
+  getLoan(): Observable<{ loan: CreateLoanResponse[] }> {
     const headers = new HttpHeaders().set('Authorization', 'Bearer ' + localStorage.getItem('token'));
-    return this.http.get(BASE_API_URL + endpoint, {headers: headers});
+    return this.http.get<{ loan: CreateLoanResponse[] }>(BASE_API_URL + "loan/get{id}", {headers: headers});
   }
 }

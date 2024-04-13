@@ -15,10 +15,17 @@ export class PassBookComponent {
 
    private bBookArray: any =[];
    constructor(@Inject(BorrowedBooksService) private bBook: BorrowedBooksService, private loan: CreateLoanResponse){}
-  //  ngOnInit() {
-  //   this.bBook.getLoan().subscribe(data =>{
-  //     this.bBookArray.push(data);
-  //     console.log(this.bBookArray)
-  //   })
-  // }
+   cards: CreateLoanResponse[] = [];
+
+   ngOnInit(): void {
+     this.getBooks();
+   }
+ 
+   getBooks(): void {
+     this.bBook.getLoan().subscribe(response => {
+       console.log(response);
+       this.cards = response.loan;
+      
+     });
+   }
 }
