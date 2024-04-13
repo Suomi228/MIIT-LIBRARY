@@ -43,9 +43,9 @@ export class CatalogueComponent {
       this.cards = response.books;
     });
   }
-  addBook(){
-    this.bBook.addBook();
-  }
+  // addBook(){
+  //   this.bBook.addBook();
+  // }
 
   checkboxes = ['Checkbox 1', 'Checkbox 2', 'Checkbox 3', 'Checkbox 4', 'Checkbox 5'];
 }

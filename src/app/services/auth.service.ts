@@ -23,7 +23,7 @@ export class AuthService {
   }
   public postAuthenticated(packet: any, endpoint: string) {
     const headers = new HttpHeaders().set('Authorization', 'Bearer ' + localStorage.getItem('token'));
-    return this.http.post(BASE_API_URL + endpoint, packet, {headers: headers});
+    return this.http.post<any>(BASE_API_URL + endpoint, packet, {headers: headers});
   }
 
   submitApplication(email: string, password: string) {
