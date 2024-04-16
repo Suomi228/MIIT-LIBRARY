@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Inject, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
 import {MatGridList, MatGridTile} from "@angular/material/grid-list";
 import {MatCardContent, MatCardModule, MatCardTitle} from "@angular/material/card";
@@ -7,6 +7,7 @@ import {NgForOf} from "@angular/common";
 import {GetBookResponse} from "../catalogue/requests/getBookRequest";
 import {BookService} from "../services/book.service";
 import {HttpClientModule} from "@angular/common/http";
+import { BorrowedBooksService } from '../services/borrowed-books.service';
 
 @Component({
   selector: 'app-catalogue',
@@ -24,10 +25,10 @@ import {HttpClientModule} from "@angular/common/http";
   ],
   templateUrl: './catalogue.component.html',
   styleUrl: './catalogue.component.scss',
-  providers: [BookService]
+  providers: [BookService, BorrowedBooksService]
 })
 export class CatalogueComponent {
-  constructor(private router: Router, private bookService: BookService) {
+  constructor(private router: Router, private bookService: BookService, @Inject(BorrowedBooksService) private bBook: BorrowedBooksService) {
   }
 
   cards: GetBookResponse[] = [];
@@ -42,6 +43,9 @@ export class CatalogueComponent {
       this.cards = response.books;
     });
   }
+  // addBook(){
+  //   this.bBook.addBook();
+  // }
 
   checkboxes = ['Checkbox 1', 'Checkbox 2', 'Checkbox 3', 'Checkbox 4', 'Checkbox 5'];
 }
