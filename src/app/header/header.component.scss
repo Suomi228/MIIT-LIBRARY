@@ -1,6 +1,7 @@
 .topnav {
     display: flex;
     position: sticky;
+    
     top: 0;
     align-self: start;
     background-color: #ffffff;
@@ -21,6 +22,8 @@ img{
     font-size: 1em;
     text-decoration: none;
     color: gray;
+    font-family: Navigo; 
+    
 }
 .topnav>a:focus {
     color: #163E73;
