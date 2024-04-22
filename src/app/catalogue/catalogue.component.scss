@@ -1,0 +1,44 @@
+
+.main-container{
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: repeat(1);
+    background-image: url('http://obama.tplinkdns.com:8081/tile_background_1.png');
+    background-repeat: no-repeat;
+    // background-size: cover;
+    background-size: 1000px
+    
+    
+  }
+  .categories{
+    grid-column: 1/3;
+    background-color: white;
+    position: absolute;
+    margin-left: 3em;
+    margin-top: 1em;
+    padding-right: 3rem;
+    border-radius: 10px;
+    
+  }
+
+  .categories li{
+    font-family: Navigo; 
+    list-style-type: none;
+    font-size: 18px;
+    padding: 1rem;
+    
+    
+  }
+  a{
+    text-decoration: none;
+    color: rgba(22, 62, 115, 1);
+    
+    
+  }
+  .container{
+    grid-column: 3/11;
+    background-color: white;
+    position: absolute;
+
+  }
+
