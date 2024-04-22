@@ -36,7 +36,7 @@ $MIIT-LIBRARY-theme: mat.define-light-theme((
 @include mat.all-component-themes($MIIT-LIBRARY-theme);
 
 html, body {
-    background-image: url('http://obama.tplinkdns.com:8081/tile_background_1.png');
+    // background-image: url('http://obama.tplinkdns.com:8081/tile_background_1.png');
     margin: 0;
     padding: 0;
     
@@ -62,3 +62,6 @@ body { margin: 0; font-family: Navigo, "Navigo-Medium", sans-serif; }
   src: url(fonts/Navigo/Navigo-Medium.woff)format("woff"); 
   src: url(fonts/Navigo/Navigo-Medium.eot)format("embedded-opentype"); 
  }
+// body{
+//   background-color: aqua;
+// }

@@ -1,22 +1,22 @@
 
+
 .main-container{
-    display: grid;
-    grid-template-columns: repeat(12,1fr);
-    grid-template-rows: repeat(1);
-    background-image: url('http://obama.tplinkdns.com:8081/tile_background_1.png');
-    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: row;
+    // background-image: url('http://obama.tplinkdns.com:8081/tile_background_1.png');
+    // background-repeat: no-repeat;
     // background-size: cover;
-    background-size: 1000px
-    
-    
+    background-color: aqua;
+   
   }
   .categories{
-    grid-column: 1/3;
+    width: 30%;
+    flex: 1;
     background-color: white;
     position: absolute;
-    margin-left: 3em;
+    margin-left: 1em;
     margin-top: 1em;
-    padding-right: 3rem;
+    padding-right: 2em;
     border-radius: 10px;
     
   }
@@ -36,9 +36,21 @@
     
   }
   .container{
-    grid-column: 3/11;
+    justify-content: end;
+    width: 70%;
+    flex: 3;
     background-color: white;
-    position: absolute;
+    
+  }
 
+  .example-card {
+    max-width: 400px;
+    margin-right: 100px;
+    
+  }
+  
+  .example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
   }
 
