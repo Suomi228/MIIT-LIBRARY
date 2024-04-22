@@ -7,18 +7,24 @@
     // background-repeat: no-repeat;
     // background-size: cover;
     background-color: aqua;
-   
   }
   .categories{
     width: 30%;
     flex: 1;
     background-color: white;
-    position: absolute;
     margin-left: 1em;
     margin-top: 1em;
     padding-right: 2em;
     border-radius: 10px;
-    
+  }
+
+  .cards_container{
+    border-radius: 10px;
+    margin-left: 1em;
+    margin-top: 1em;
+    width: 70%;
+    flex: 3;
+    background-color: white; 
   }
 
   .categories li{
@@ -26,27 +32,18 @@
     list-style-type: none;
     font-size: 18px;
     padding: 1rem;
-    
-    
   }
   a{
     text-decoration: none;
     color: rgba(22, 62, 115, 1);
-    
-    
   }
-  .container{
-    justify-content: end;
-    width: 70%;
-    flex: 3;
-    background-color: white;
-    
-  }
+  
 
   .example-card {
+    margin-left: 1em;
+    margin-top: 1em;
     max-width: 400px;
     margin-right: 100px;
-    
   }
   
   .example-header-image {
