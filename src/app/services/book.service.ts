@@ -16,4 +16,8 @@ export class BookService {
     const headers = new HttpHeaders().set('Authorization', 'Bearer ' + localStorage.getItem('token'));
     return this.http.get<{ books: GetBookResponse[] }>(BASE_API_URL + "book/get", {headers: headers});
   }
+  getBook(id: number): Observable<GetBookResponse> {
+    const headers = new HttpHeaders().set('Authorization', 'Bearer ' + localStorage.getItem('token'));
+    return this.http.get<GetBookResponse>(BASE_API_URL + "book/get/" + id, {headers: headers});
+  }
 }

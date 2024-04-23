@@ -32,11 +32,11 @@
     </ul>
 
   </div>
-  <div class="cards_container" *ngFor="let card of cards">
-    <mat-card class="book-card">
+  <div class="cards_container" >
+    <mat-card class="book-card" *ngFor="let card of cards" [routerLink]="['/details', card.id]">
       <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
       <mat-card-content class="description-of-the-book">
-        <a [routerLink]="['/details', card.id]">Learn More</a>
+        <a [routerLink]="['/details', card.id]">{{card.title}}</a>
       </mat-card-content>
       
     </mat-card>

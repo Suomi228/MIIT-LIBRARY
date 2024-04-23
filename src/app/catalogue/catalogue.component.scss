@@ -6,8 +6,8 @@
     display: grid;
     grid-template-columns: repeat(12,1fr);
     background-image: url('http://obama.tplinkdns.com:8081/tile_background_1.png');
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-repeat: repeat;
+    background-size: auto;
     // background-color: aqua;
   }
   .categories{
@@ -51,6 +51,7 @@
     max-width: 250px;
     max-height: 300px;
     margin-right: 10px;
+    cursor: pointer;
   }
   
   .example-header-image {
