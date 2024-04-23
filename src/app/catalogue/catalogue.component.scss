@@ -1,32 +1,26 @@
 
 
 .main-container{
-    display: flex;
-    flex-direction: row;
-    // background-image: url('http://obama.tplinkdns.com:8081/tile_background_1.png');
-    // background-repeat: no-repeat;
-    // background-size: cover;
-    background-color: aqua;
+    // display: flex;
+    // flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    background-image: url('http://obama.tplinkdns.com:8081/tile_background_1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    // background-color: aqua;
   }
   .categories{
-    width: 30%;
-    flex: 1;
+    // flex: 1;
+    grid-column: 2/4;
     background-color: white;
-    margin-left: 1em;
+    // margin-left: 1em;
     margin-top: 1em;
-    padding-right: 2em;
+    // padding-right: 3em;
     border-radius: 10px;
+    max-height: 1116px;
+    max-width: 250px;
   }
-
-  .cards_container{
-    border-radius: 10px;
-    margin-left: 1em;
-    margin-top: 1em;
-    width: 70%;
-    flex: 3;
-    background-color: white; 
-  }
-
   .categories li{
     font-family: Navigo; 
     list-style-type: none;
@@ -37,17 +31,35 @@
     text-decoration: none;
     color: rgba(22, 62, 115, 1);
   }
-  
 
-  .example-card {
+  .cards_container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 30px;
+    grid-template-rows: 300px;
+    border-radius: 10px;
     margin-left: 1em;
     margin-top: 1em;
-    max-width: 400px;
-    margin-right: 100px;
+    grid-column: 4/12;
+    background-color: white; 
+    justify-content: center;
+  }
+  .book-card {
+    font-family: Navigo; 
+    margin-left: 7em;
+    margin-top: 1em;
+    max-width: 250px;
+    max-height: 300px;
+    margin-right: 10px;
   }
   
   .example-header-image {
     background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
     background-size: cover;
   }
+  .description-of-the-book>p{
+    margin-top: 2em;
+    text-align: center;
+    color: rgba(22, 62, 115, 1);
+  } 
 

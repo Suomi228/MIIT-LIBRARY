@@ -9,6 +9,7 @@ import {BookService} from "../services/book.service";
 import {HttpClientModule} from "@angular/common/http";
 import { BorrowedBooksService } from '../services/borrowed-books.service';
 
+
 @Component({
   selector: 'app-catalogue',
   standalone: true,
