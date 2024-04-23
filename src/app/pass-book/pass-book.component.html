@@ -1,5 +1,21 @@
-
 <div class="main-conteiner">
-  <img src="http://obama.tplinkdns.com:8081/tile_background_1.png" alt="dsd">
-<div class="conteiner"> </div>
+  <div class="conteiner"> 
+      <div class="card-11">
+        <div class="button">
+          <mat-card class="card-1">
+            <mat-card-content>
+            </mat-card-content>
+          </mat-card>
+          <p class="title">Название книги</p>
+        </div>
+        <div class="description">
+          <p>Книга взята : 11.01.2024</p>
+          <p>Необходимо сдать книгу до : 11.02.2024</p>
+          <p> Осталось: 20 дней </p>
+        </div>
+      </div>
+      <mat-card class="demo-inline-calendar-card">
+        <mat-calendar [(selected)]="selected"></mat-calendar>
+      </mat-card>
+  </div>
 </div>
