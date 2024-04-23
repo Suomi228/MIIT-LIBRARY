@@ -32,42 +32,14 @@
     </ul>
 
   </div>
-  <div class="cards_container">
-    <mat-card class="book-card" (click)="redirectToProductPage()">
+  <div class="cards_container" *ngFor="let card of cards">
+    <mat-card class="book-card">
       <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
       <mat-card-content class="description-of-the-book">
-        <p>
-          Название книги
-        </p>
+        <a [routerLink]="['/details', card.id]">Learn More</a>
       </mat-card-content>
       
     </mat-card>
-    <mat-card class="book-card" (click)="redirectToProductPage()">
-      <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
-      <mat-card-content class="description-of-the-book">
-        <p>
-          Название книги
-        </p>
-      </mat-card-content>
-    </mat-card>
-    <mat-card class="book-card" (click)="redirectToProductPage()">
-      <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
-      <mat-card-content class="description-of-the-book">
-        <p>
-          Название книги
-        </p>
-      </mat-card-content>
-      
-    </mat-card>
-    <mat-card class="book-card" (click)="redirectToProductPage()">
-      <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
-      <mat-card-content class="description-of-the-book">
-        <p>
-          Название книги
-        </p>
-      </mat-card-content>
-    </mat-card>
-    
   </div>
 </div>
 

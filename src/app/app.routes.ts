@@ -3,6 +3,7 @@ import {LoginComponent} from "./login/login.component";
 import {HomePageComponent} from "./home-page/home-page.component";
 import {CatalogueComponent} from "./catalogue/catalogue.component";
 import { PassBookComponent } from './pass-book/pass-book.component';
+import { CatalogueDetailComponent } from './catalogue-detail/catalogue-detail.component';
 
 export const routes: Routes = [
   // obama.tplinkdns.com + path
@@ -11,4 +12,5 @@ export const routes: Routes = [
   { path: "" ,component: HomePageComponent },
   {path: "catalogue", component: CatalogueComponent},
   {path: "pass-book", component: PassBookComponent},
+  {path: "details", component: CatalogueDetailComponent},
 ];
