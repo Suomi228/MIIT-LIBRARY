@@ -1,5 +1,5 @@
 import {Component, Inject, OnInit} from '@angular/core';
-import {Router} from "@angular/router";
+import {Router, RouterModule} from "@angular/router";
 import {MatGridList, MatGridTile} from "@angular/material/grid-list";
 import {MatCardContent, MatCardModule, MatCardTitle} from "@angular/material/card";
 import {MatCheckbox, MatCheckboxModule} from "@angular/material/checkbox";
@@ -8,6 +8,7 @@ import {GetBookResponse} from "../catalogue/requests/getBookRequest";
 import {BookService} from "../services/book.service";
 import {HttpClientModule} from "@angular/common/http";
 import { BorrowedBooksService } from '../services/borrowed-books.service';
+
 
 @Component({
   selector: 'app-catalogue',
@@ -21,7 +22,8 @@ import { BorrowedBooksService } from '../services/borrowed-books.service';
     MatCheckboxModule,
     MatCardModule,
     NgForOf,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule
   ],
   templateUrl: './catalogue.component.html',
   styleUrl: './catalogue.component.scss',
