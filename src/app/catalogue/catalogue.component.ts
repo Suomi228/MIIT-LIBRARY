@@ -33,6 +33,8 @@ export class CatalogueComponent {
   constructor(private router: Router, private bookService: BookService, @Inject(BorrowedBooksService) private bBook: BorrowedBooksService) {
   }
   booksAmount: bigint = 1002n;
+  pageSize: number = 20;
+  currentPage: number = 0;
   cards: GetBookResponse[] = [];
 
   ngOnInit(): void {
@@ -55,6 +57,8 @@ export class CatalogueComponent {
   }
   onPageEvent(event: PageEvent): void {
     this.getBooks(event.pageIndex + 1, event.pageSize);
+    this.pageSize = event.pageSize;
+    this.currentPage = event.pageIndex;
     console.log(event);
   }
   // addBook(){

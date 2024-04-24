@@ -31,8 +31,9 @@
   </div>
   <div class="cards_page_container">
     <mat-paginator class="mat-paginator-top" [length]="booksAmount"
-                   [pageSize]="20"
+                   [pageSize]="pageSize"
                    [pageSizeOptions]="[20, 50, 100]"
+                   [pageIndex]="currentPage"
                    aria-label="Select page"
                    (page)="onPageEvent($event)">
     </mat-paginator>
@@ -45,8 +46,9 @@
       </mat-card>
     </div>
     <mat-paginator class="mat-paginator-bottom" [length]="booksAmount"
-                   [pageSize]="20"
+                   [pageSize]="pageSize"
                    [pageSizeOptions]="[20, 50, 100]"
+                   [pageIndex]="currentPage"
                    aria-label="Select page"
                    (page)="onPageEvent($event)">
     </mat-paginator>
