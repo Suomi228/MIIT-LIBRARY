@@ -14,7 +14,7 @@ import { HeaderComponent } from './header/header.component';
   <main class="body">
   <app-header></app-header>
     <section class="content">
-    
+
     <router-outlet></router-outlet>
     </section>
   </main>
