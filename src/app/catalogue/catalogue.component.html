@@ -32,76 +32,14 @@
     </ul>
 
   </div>
-  <div class="cards_container">
-    <mat-card class="book-card" >
-      <img mat-card-image src="assets/media/Книга (1).png" alt="Photo of a Shiba Inu">
+  <div class="cards_container" >
+    <mat-card class="book-card" *ngFor="let card of cards" [routerLink]="['/details', card.id]">
+      <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
       <mat-card-content class="description-of-the-book">
-        <p>
-          Название книги
-        </p>
+        <a [routerLink]="['/details', card.id]">{{card.title}}</a>
       </mat-card-content>
       
     </mat-card>
-    <mat-card class="book-card" >
-      <img mat-card-image src="http://obama.tplinkdns.com:8081/bookSample.jpg" alt="Photo of a Shiba Inu">
-      <mat-card-content class="description-of-the-book">
-        <p>
-          Название книги
-        </p>
-      </mat-card-content>
-    </mat-card>
-    <mat-card class="book-card" >
-      <img mat-card-image src="http://obama.tplinkdns.com:8081/bookSample.jpg" alt="Photo of a Shiba Inu">
-      <mat-card-content class="description-of-the-book">
-        <p>
-          Название книги
-        </p>
-      </mat-card-content>
-      
-    </mat-card>
-    <mat-card class="book-card" >
-      <img mat-card-image src="http://obama.tplinkdns.com:8081/bookSample.jpg" alt="Photo of a Shiba Inu">
-      <mat-card-content class="description-of-the-book">
-        <p>
-          Название книги
-        </p>
-      </mat-card-content>
-    </mat-card>
-    <mat-card class="book-card" >
-      <img mat-card-image src="assets/media/Книга (1).png" alt="Photo of a Shiba Inu">
-      <mat-card-content class="description-of-the-book">
-        <p>
-          Название книги
-        </p>
-      </mat-card-content>
-      
-    </mat-card>
-    <mat-card class="book-card" >
-      <img mat-card-image src="http://obama.tplinkdns.com:8081/bookSample.jpg" alt="Photo of a Shiba Inu">
-      <mat-card-content class="description-of-the-book">
-        <p>
-          Название книги
-        </p>
-      </mat-card-content>
-    </mat-card>
-    <mat-card class="book-card" >
-      <img mat-card-image src="http://obama.tplinkdns.com:8081/bookSample.jpg" alt="Photo of a Shiba Inu">
-      <mat-card-content class="description-of-the-book">
-        <p>
-          Название книги
-        </p>
-      </mat-card-content>
-      
-    </mat-card>
-    <mat-card class="book-card" >
-      <img mat-card-image src="http://obama.tplinkdns.com:8081/bookSample.jpg" alt="Photo of a Shiba Inu">
-      <mat-card-content class="description-of-the-book">
-        <p>
-          Название книги
-        </p>
-      </mat-card-content>
-    </mat-card>
-    
   </div>
 </div>
 
