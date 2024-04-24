@@ -1,4 +1,148 @@
-
-p{
-  display: block;
+@media (max-width: 1920px) {
+  .list{
+    display: flex;
+    font-family: Navigo;
+  }
+  .background{
+    background-image: url("/assets/media/tile_background 3 (1).png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+  }
+  .block_1{
+    padding: 20px;
+  }
+  .image_block{
+    padding-top: 15px;
+    display: flex;
+    justify-content: center;
+  }
+  .white_fon{
+    font-family: 'Navigo';
+    font-size: 1.5em;
+    color: #163E73;
+    border-radius: 12px;
+    border-style: solid;
+    background-color: rgb(255, 255, 255);
+    width: 1200px;
+    padding-right: 15px;
+    padding-left: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .image_info{
+    position: absolute;
+    color: #163E73;
+    font-size: 150px;
+    padding-top: 280px;
+  }
+  h2{
+    display: flex;
+    font-size: 1.5em;
+    justify-content: center;
+    padding: 10px;
+  }
+  .contacts{
+    padding-left: 1em;
+    display: inline-block;
+    width: 600px;
+  }
+  .map{
+    display: inline-block;
+    img {width: 500px}
+    padding-top: 1em;
+    padding-left: 3em;
+  }
+  .container{
+    display: flex;
+    flex-direction: row;
+  }
+  .bottom{
+    
+  }
+}
+@media (max-width: 1600px) {
+  .block_1{
+    padding: 20px;
+  }
+  .image_block{
+    img {width: 880px}
+    padding-top: 15px;
+    display: flex;
+    justify-content: center;
+  }
+  .white_fon{
+    font-family: 'Navigo';
+    font-size: 1.5em;
+    color: #163E73;
+    border-radius: 12px;
+    border-style: solid;
+    background-color: rgb(255, 255, 255);
+    width: 920px;
+    padding-right: 15px;
+    padding-left: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .image_info{
+    position: absolute;
+    color: #163E73;
+    font-size: 100px;
+    padding-top: 200px;
+  }
+  .map{
+    display: inline-block;
+    img {width: 350px}
+    padding-top: 1em;
+    padding-left: 3em;
+  }
+  .contacts{
+    padding-left: 3em;
+    display: inline-block;
+    width: 400px;
+  }
+}
+@media (max-width: 1024px) {
+  .block_1{
+    padding: 20px;
+  }
+  .image_block{
+    img {width: 680px}
+    padding-top: 15px;
+    display: flex;
+    justify-content: center;
+  }
+  .white_fon{
+    font-family: 'Navigo';
+    font-size: 1.12em;
+    color: #163E73;
+    border-radius: 12px;
+    border-style: solid;
+    background-color: rgb(255, 255, 255);
+    width: 700px;
+    padding-right: 15px;
+    padding-left: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .image_info{
+    position: absolute;
+    color: #163E73;
+    font-size: 80px;
+    padding-top: 150px;
+  }
+  .map{
+    display: inline-block;
+    img {width: 250px}
+    padding-top: 1em;
+    padding-left: 2.5em;
+  }
+  .contacts{
+    padding-left: 2.5em;
+    display: inline-block;
+    width: 300px;
+  }
 }
