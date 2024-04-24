@@ -1,16 +1,61 @@
-<div style="display: flex;">
-  <div style="flex: 1;">
-    <mat-checkbox *ngFor="let checkbox of checkboxes">{{ checkbox }}</mat-checkbox>
-    <p style="cursor: pointer; color: chocolate;" >BOOK</p>
+
+<div class="main-container">
+  <img src="http://obama.tplinkdns.com:8081/tile_background_1.png" alt="tile_background">
+  <div class="categories">
+    <ul>
+      <li><a href="#">Математика</a></li>
+      <li><a href="#">Физика</a></li>
+      <li><a href="#">Теоретическая механика</a></li>
+      <li><a href="#">Инженерно-технические науки</a></li>
+      <li>
+        <a href="#">Ветеринария и сельское хозяйство</a>
+        </li>
+      <li><a href="#">Информатика</a>
+        </li>
+      <li><a href="#">Образовательная роботехника</a>
+        </li>
+      <li><a href="#">Русский как иностранный</a>
+        </li>
+      <li><a href="#">Право. Юридические науки</a>
+        </li>
+      <li><a href="#">Балет. Танец. Хореография</a>
+        </li>
+      <li><a href="#">Технологии легкой промышленности</a>
+        </li>
+      <li><a href="#">Экономика и менеджемент</a>
+        </li>
+      <li>
+        <a href="#">Военное дело</a>
+        </li>
+      <li><a href="#">География</a>
+        </li>
+      
+
+    
+    </ul>
+
   </div>
-  <div style="flex: 3; overflow-y: auto; max-height: 100vh;">
-    <mat-grid-list cols="2" rowHeight="1:1" gutterSize="10px">
-      <mat-grid-tile *ngFor="let card of cards">
-        <mat-card style="width: 90%; height: 90%">
-          <mat-card-title>{{ card.title }}</mat-card-title>
-          <mat-card-content>{{ card.description }}</mat-card-content>
-        </mat-card>
-      </mat-grid-tile>
-    </mat-grid-list>
+  <div class="container">
+
   </div>
+
+
 </div>
+
+<!-- <div style="display: flex;">
+    <div class="categories" style="flex: 1;">
+      <img src="\images\tile_background 1.png" alt="">
+      <mat-checkbox *ngFor="let checkbox of checkboxes">{{ checkbox }}</mat-checkbox>
+      <p style="cursor: pointer; color: chocolate;" >BOOK</p>
+    </div>
+    <div style="flex: 3; overflow-y: auto; max-height: 100vh;">
+      <mat-grid-list cols="2" rowHeight="1:1" gutterSize="10px">
+        <mat-grid-tile *ngFor="let card of cards">
+          <mat-card style="width: 90%; height: 90%">
+            <mat-card-title>{{ card.title }}</mat-card-title>
+            <mat-card-content>{{ card.description }}</mat-card-content>
+          </mat-card>
+        </mat-grid-tile>
+      </mat-grid-list>
+    </div>
+  </div> -->

@@ -1,0 +1,56 @@
+
+.main-conteiner {
+  background-image: url('http://obama.tplinkdns.com:8081/tile_background4.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.conteiner3{
+  background-color: white;
+  display: block;
+  flex-direction: row;
+  margin-top: 1em;
+  margin-left: 1em;
+  margin-right: 1em;
+  border-radius: 10px;
+}
+.conteiner{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 1em;
+  margin-left: 1em;
+  margin-right: 1em;
+  border-radius: 10px;
+}
+
+.card-11{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 8%;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.description{
+  margin-left: 8%;
+  color:rgba(22, 62, 115, 1);
+  width: 100%;
+}
+
+.button {
+  display: flex;
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center;
+}
+
+.card-1{
+  display: flex;
+  width: 300px;
+  height: 400px;
+  border: 1px solid rgba(22, 62, 115, 1);
+}
+p{
+font-family: 'Navigo';
+}
