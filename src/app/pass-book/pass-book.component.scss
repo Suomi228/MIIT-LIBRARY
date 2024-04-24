@@ -1,25 +1,17 @@
 
 .main-conteiner {
-  background-image: url('http://obama.tplinkdns.com:8081/tile_background4.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.conteiner3{
-  background-color: white;
-  display: block;
-  flex-direction: row;
-  margin-top: 1em;
-  margin-left: 1em;
-  margin-right: 1em;
-  border-radius: 10px;
+  background-image: url('/assets/media/tile_background 3 (1).png');
+  background-repeat: repeat;
+  background-size: auto;
+  background-clip: border-box;
+  padding: 1em;
 }
 .conteiner{
-  display: flex;
+  background-color: white;
+  display: block;
   flex-direction: column;
-  justify-content: space-between;
-  margin-top: 1em;
-  margin-left: 1em;
-  margin-right: 1em;
+  //justify-content: space-between;
+  //margin-top: 1em;
   border-radius: 10px;
 }
 
@@ -28,8 +20,8 @@
   flex-direction: row;
   align-items: center;
   margin-left: 8%;
-  margin-top: 2em;
-  margin-bottom: 2em;
+  padding-top: 4em;
+  padding-bottom: 4em;
 }
 
 .description{
@@ -40,8 +32,8 @@
 
 .button {
   display: flex;
-  flex-direction: column; 
-  justify-content: center; 
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
