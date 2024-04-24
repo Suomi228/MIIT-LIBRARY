@@ -7,9 +7,8 @@ import {NgForOf} from "@angular/common";
 import {GetBookResponse} from "../catalogue/requests/getBookRequest";
 import {BookService} from "../services/book.service";
 import {HttpClientModule} from "@angular/common/http";
-import { BorrowedBooksService } from '../services/borrowed-books.service';
-
-
+import {BorrowedBooksService} from '../services/borrowed-books.service';
+import {MatPaginatorModule, PageEvent} from '@angular/material/paginator';
 @Component({
   selector: 'app-catalogue',
   standalone: true,
@@ -23,7 +22,8 @@ import { BorrowedBooksService } from '../services/borrowed-books.service';
     MatCardModule,
     NgForOf,
     HttpClientModule,
-    RouterModule
+    RouterModule,
+    MatPaginatorModule
   ],
   templateUrl: './catalogue.component.html',
   styleUrl: './catalogue.component.scss',
@@ -32,18 +32,30 @@ import { BorrowedBooksService } from '../services/borrowed-books.service';
 export class CatalogueComponent {
   constructor(private router: Router, private bookService: BookService, @Inject(BorrowedBooksService) private bBook: BorrowedBooksService) {
   }
-
+  booksAmount: bigint = 1002n;
   cards: GetBookResponse[] = [];
 
   ngOnInit(): void {
-    this.getBooks();
+    this.getBooks(1, 20);
+    this.getBooksAmount();
   }
 
-  getBooks(): void {
-    this.bookService.getBooks().subscribe(response => {
+  getBooks(page: number, size: number): void {
+    this.bookService.getBooks(page, size).subscribe(response => {
       console.log(response);
       this.cards = response.books;
     });
+  }
+  getBooksAmount(): void {
+    this.bookService.getBooksAmount().subscribe(response => {
+      console.log(response)
+      this.booksAmount = response.amount;
+    });
+
+  }
+  onPageEvent(event: PageEvent): void {
+    this.getBooks(event.pageIndex + 1, event.pageSize);
+    console.log(event);
   }
   // addBook(){
   //   this.bBook.addBook();

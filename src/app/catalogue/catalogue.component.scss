@@ -1,57 +1,94 @@
 
 .main-container{
-  // display: flex;
-  // flex-direction: row;
-  display: grid;
-  grid-template-columns: repeat(12,1fr);
+  display: flex;
+  //grid-template-columns: repeat(12,1fr);
+  //grid-template-rows: auto;
   background-image: url('/assets/media/tile_background 3 (1).png');
   background-repeat: repeat;
   background-size: auto;
-  // background-color: aqua;
+  padding: 2em;
+  gap: 2em;
 }
-.categories{
-  // flex: 1;
-  grid-column: 2/4;
+.mat-paginator-bottom{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  padding-bottom: 1em;
+}
+.mat-paginator-top{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  padding-top: 1em;
+}
+
+.categories_container{
+  flex: 1;
   background-color: white;
-  // margin-left: 1em;
-  margin-top: 1em;
-  // padding-right: 3em;
   border-radius: 10px;
-  max-height: 1116px;
-  max-width: 250px;
+  width: 25%;
+  height: auto;
+  align-self: flex-start;
+  min-width: 20%;
 }
-.categories li{
-  font-family: Navigo; 
+.cards_page_container{
+  background-color: white;
+  flex: 4;
+  width: 75%;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  //grid-column: 4/12;
+}
+.cards_container{
+  background-color: white;
+  //padding: 16em;
+  display: grid;
+  //grid-template-columns: repeat(4, 1fr); // Создает два столбца равной ширины
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  padding: 2em;
+  gap: 4em;
+}
+@media screen and (max-width: 600px) {
+  .cards_container{
+    grid-template-columns: repeat(2, 1fr); // Создает два столбца равной ширины
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .cards_container{
+    grid-template-columns: 1fr; // Создает один столбец
+  }
+}
+.book-card {
+  font-family: Navigo;
+  //margin-left: 7em;
+  //margin-top: 1em;
+  //max-width: 40%;
+  //max-height: 300px;
+  //margin-right: 10px;
+  //margin: 2em;
+  cursor: pointer;
+}
+.book-card-img{
+  padding: 1em;
+}
+.categories_container li{
+  font-family: Navigo;
   list-style-type: none;
   font-size: 18px;
   padding: 1rem;
 }
+
 a{
   text-decoration: none;
   color: rgba(22, 62, 115, 1);
 }
 
-.cards_container{
-  display: grid;
-  grid-template-columns: repeat(2,1fr);
-  gap: 30px;
-  grid-template-rows: 300px;
-  border-radius: 10px;
-  margin-left: 1em;
-  margin-top: 1em;
-  grid-column: 4/12;
-  background-color: white; 
-  justify-content: center;
-}
-.book-card {
-  font-family: Navigo; 
-  margin-left: 7em;
-  margin-top: 1em;
-  max-width: 40%;
-  max-height: 300px;
-  margin-right: 10px;
-  cursor: pointer;
-}
+
+
 
 .example-header-image {
   background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
