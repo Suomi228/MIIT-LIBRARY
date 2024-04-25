@@ -1,6 +1,5 @@
-
 <div class="main-container">
-  <div class="categories">
+  <div class="categories_container">
     <ul>
       <li><a href="#">Математика</a></li>
       <li><a href="#">Физика</a></li>
@@ -8,54 +7,54 @@
       <li><a href="#">Инженерно-технические науки</a></li>
       <li>
         <a href="#">Ветеринария и сельское хозяйство</a>
-        </li>
+      </li>
       <li><a href="#">Информатика</a>
-        </li>
+      </li>
       <li><a href="#">Образовательная роботехника</a>
-        </li>
+      </li>
       <li><a href="#">Русский как иностранный</a>
-        </li>
+      </li>
       <li><a href="#">Право. Юридические науки</a>
-        </li>
+      </li>
       <li><a href="#">Балет. Танец. Хореография</a>
-        </li>
+      </li>
       <li><a href="#">Технологии легкой промышленности</a>
-        </li>
+      </li>
       <li><a href="#">Экономика и менеджемент</a>
-        </li>
+      </li>
       <li>
         <a href="#">Военное дело</a>
-        </li>
+      </li>
       <li><a href="#">География</a>
-        </li>
+      </li>
     </ul>
-
   </div>
-  <div class="cards_container" >
-    <mat-card class="book-card" *ngFor="let card of cards" [routerLink]="['/details', card.id]">
-      <img mat-card-image src="/assets/media/Книга (1).png" alt="Photo of book">
-      <mat-card-content class="description-of-the-book">
-        <a [routerLink]="['/details', card.id]">{{card.title}}</a>
-      </mat-card-content>
-
-    </mat-card>
+  <div class="cards_page_container">
+    <mat-paginator class="mat-paginator-top" [length]="booksAmount"
+                   [pageSize]="pageSize"
+                   [pageSizeOptions]="[20, 50, 100]"
+                   [pageIndex]="currentPage"
+                   [hidePageSize]="true"
+                   [showFirstLastButtons]="true"
+                   aria-label="Select page"
+                   (page)="onPageEvent($event)">
+    </mat-paginator>
+    <div class="cards_container">
+      <mat-card class="book-card" *ngFor="let card of cards" [routerLink]="['/details', card.id]">
+        <img mat-card-image class="book-card-img" src="/assets/media/Книга (1).png" alt="Photo of book">
+        <mat-card-content class="description-of-the-book">
+          <a [routerLink]="['/details', card.id]">{{ card.title }}</a>
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <mat-paginator class="mat-paginator-bottom" [length]="booksAmount"
+                   [pageSize]="pageSize"
+                   [pageSizeOptions]="[20, 50, 100]"
+                   [pageIndex]="currentPage"
+                   [hidePageSize]="true"
+                   [showFirstLastButtons]="true"
+                   aria-label="Select page"
+                   (page)="onPageEvent($event)">
+    </mat-paginator>
   </div>
 </div>
-
-<!-- <div style="display: flex;">
-    <div class="categories" style="flex: 1;">
-      <img src="\images\tile_background 1.png" alt="">
-      <mat-checkbox *ngFor="let checkbox of checkboxes">{{ checkbox }}</mat-checkbox>
-      <p style="cursor: pointer; color: chocolate;" >BOOK</p>
-    </div>
-    <div style="flex: 3; overflow-y: auto; max-height: 100vh;">
-      <mat-grid-list cols="2" rowHeight="1:1" gutterSize="10px">
-        <mat-grid-tile *ngFor="let card of cards">
-          <mat-card style="width: 90%; height: 90%">
-            <mat-card-title>{{ card.title }}</mat-card-title>
-            <mat-card-content>{{ card.description }}</mat-card-content>
-          </mat-card>
-        </mat-grid-tile>
-      </mat-grid-list>
-    </div>
-  </div> -->
