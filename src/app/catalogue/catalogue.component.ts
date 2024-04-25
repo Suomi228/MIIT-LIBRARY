@@ -8,7 +8,8 @@ import {GetBookResponse} from "../catalogue/requests/getBookRequest";
 import {BookService} from "../services/book.service";
 import {HttpClientModule} from "@angular/common/http";
 import {BorrowedBooksService} from '../services/borrowed-books.service';
-import {MatPaginatorModule, PageEvent} from '@angular/material/paginator';
+import {MatPaginatorModule, PageEvent,  MatPaginatorIntl} from '@angular/material/paginator';
+import {CustomMatPaginatorIntl} from "../custom-materials/CustomMatPaginatorIntl";
 @Component({
   selector: 'app-catalogue',
   standalone: true,
@@ -27,12 +28,14 @@ import {MatPaginatorModule, PageEvent} from '@angular/material/paginator';
   ],
   templateUrl: './catalogue.component.html',
   styleUrl: './catalogue.component.scss',
-  providers: [BookService, BorrowedBooksService]
+  providers: [BookService, BorrowedBooksService,
+    {provide: MatPaginatorIntl, useClass: CustomMatPaginatorIntl}
+  ]
 })
 export class CatalogueComponent {
   constructor(private router: Router, private bookService: BookService, @Inject(BorrowedBooksService) private bBook: BorrowedBooksService) {
   }
-  booksAmount: bigint = 1002n;
+  booksAmount: bigint = 100n;
   pageSize: number = 20;
   currentPage: number = 0;
   cards: GetBookResponse[] = [];

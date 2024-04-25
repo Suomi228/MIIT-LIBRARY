@@ -15,6 +15,9 @@
   align-items: center;
   background-color: transparent;
   padding-bottom: 1em;
+  font-family: Navigo;
+  font-size: 18px;
+  color: rgba(22, 62, 115, 1);
 }
 .mat-paginator-top{
   display: flex;
@@ -22,6 +25,9 @@
   align-items: center;
   background-color: transparent;
   padding-top: 1em;
+  font-family: Navigo;
+  font-size: 18px;
+  color: rgba(22, 62, 115, 1);
 }
 
 .categories_container{
@@ -76,8 +82,9 @@
   padding: 1em;
 }
 .categories_container li{
-  font-family: Navigo;
+
   list-style-type: none;
+  font-family: Navigo;
   font-size: 18px;
   padding: 1rem;
 }
