@@ -1,0 +1,112 @@
+
+.main-container{
+    display: flex;
+    background-image: url('/assets/media/tile_background 3 (1).png');
+    background-repeat: repeat;
+    background-size: auto;
+    background-clip: border-box;
+    padding: 1em;
+    gap: 2em;
+  }
+ 
+  .categories_container{
+    flex: 1;
+    background-color: white;
+    border-radius: 10px;
+    width: 25%;
+    height: auto;
+    align-self: flex-start;
+    min-width: 20%;
+  }
+  .cards_page_container{
+    background-color: white;
+    flex: 4;
+    width: 75%;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+  }
+  .cards_container{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 2em;
+    gap: 4em;
+  }
+  @media screen and (max-width: 600px) {
+    .cards_container{
+      grid-template-columns: repeat(2, 1fr); // Создает два столбца равной ширины
+    }
+  }
+  
+  @media screen and (max-width: 400px) {
+    .cards_container{
+      grid-template-columns: 1fr; // Создает один столбец
+    }
+  }
+  .book-card {
+    font-family: Navigo;
+
+    cursor: pointer;
+  }
+  .book-card-img{
+    padding: 1em;
+  }
+  .categories_container li{
+  
+    list-style-type: none;
+    font-family: Navigo;
+    font-size: 18px;
+    padding: 1rem;
+  }
+  
+  a{
+    text-decoration: none;
+    color: rgba(22, 62, 115, 1);
+  }
+// button
+.button-container{
+    display: flex;
+    justify-content: center;
+}
+.btn{
+    margin-top: 30px;
+    border-color: #163E73;
+    border-width: 0.5px;
+    border-radius: 10px;
+    background-color: #EAEEF2;
+    padding-top: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    font-size: 20px;
+    font-family: Navigo;
+    color: #163E73;
+    cursor: pointer;
+  } 
+  
+  .btn:active{
+    background-color: #EAEEF2;
+    color: #163E73;
+    cursor:auto;
+  
+  }
+  .btn:hover{
+    color: #EAEEF2;
+    background-color: #163E73;
+  }
+//button
+  
+  
+  
+  .example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+  }
+  .description-of-the-book>p{
+    margin-top: 1em;
+    // padding-top: 1em;
+    text-align: center;
+    color: rgba(22, 62, 115, 1);
+  }
+  
