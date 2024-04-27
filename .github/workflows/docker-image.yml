@@ -23,7 +23,7 @@ jobs:
         context: .
         file: ./Dockerfile
         push: true
-        tags: docker.io/yobange/angular-library:${{ github.event.repository.updated_at}}
+        tags: docker.io/yobange/angular-library-${{ steps.timestamp.outputs.timestamp }}
 
     - name: Deploy to server
       uses: appleboy/ssh-action@master
@@ -32,8 +32,8 @@ jobs:
         username: ${{ secrets.SERVER_USERNAME }}
         password: ${{ secrets.SERVER_PASSWORD }}
         script: |
-          docker pull docker.io/yobange/angular-library:${{ github.event.repository.updated_at}}
+          docker pull docker.io/yobange/angular-library-${{ steps.timestamp.outputs.timestamp }}
           docker stop angular-container
           docker rm angular-container
           docker rmi angular-library:latest
-          docker run -d -p 80:80 --name angular-container docker.io/yobange/angular-library:${{ github.event.repository.updated_at}}
+          docker run -d -p 80:80 --name angular-container docker.io/yobange/angular-library-${{ steps.timestamp.outputs.timestamp }}
