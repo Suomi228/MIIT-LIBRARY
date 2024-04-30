@@ -1,50 +1,60 @@
 <div class="background">
-  <div class="choose-bk">
-    <div class="filter">
-      <p>Фильтры</p>
-      <mat-chip-listbox aria-label="Color selection">
-        <mat-chip-option >Жанры</mat-chip-option>
-        <mat-chip-option >Авторы</mat-chip-option>
-        <mat-chip-option >Книги</mat-chip-option>
-      </mat-chip-listbox>
-      <form class="search-form">
-        <mat-form-field class="search-line" >
-          <!-- <mat-label>Поиск</mat-label> -->
-          <input matInput placeholder="Поиск" >
-          <button  matSuffix mat-icon-button  aria-label="Search">
-            <mat-icon>search</mat-icon>
-          </button>
-        </mat-form-field>
-      </form>
-      <cdk-virtual-scroll-viewport appendOnly itemSize="50" class="viewport">
-        <div *cdkVirtualFor="let item of items" class="item">{{item}}</div>
-      </cdk-virtual-scroll-viewport>
+  <div class="filter-container">
+    <p>Фильтры</p>
+
+    <mat-chip-listbox class="mat-chip-list" aria-label="Color selection">
+      <mat-chip-option>Жанры</mat-chip-option>
+      <mat-chip-option>Авторы</mat-chip-option>
+      <mat-chip-option>Книги</mat-chip-option>
+    </mat-chip-listbox>
+
+    <mat-form-field class="search-line">
+      <!-- <mat-label>Поиск</mat-label> -->
+      <input matInput placeholder="Поиск" #searchinput>
+      <button matSuffix mat-icon-button aria-label="Search" (click)="searchBooks(searchinput.value)">
+        <mat-icon>search</mat-icon>
+      </button>
+    </mat-form-field>
+    <div class="items-list">
+      <mat-list-item class="mat-list" *ngFor="let book of books" (click)="selectBook(book)">
+        <!--        <mat-icon matListItemIcon>folder</mat-icon>-->
+
+        <mat-card class="card-books" matRipple>
+          <mat-card-content>Название: {{ book.title }}</mat-card-content>
+        </mat-card>
+        <!--        <div matListItemTitle>Название: {{ book.title }}</div>-->
+        <!--        <div matListItemLine>ID: {{ book.id }}</div>-->
+      </mat-list-item>
     </div>
   </div>
 
-  <div class="info-bk">
+  <div class="info-container">
     <div class="ID">
       <p>Информация</p>
       <div class="book-id">
-        <span>Book ID </span>
+        <span #bookIdField>Book ID: {{ selectedBook?.id }}</span>
       </div>
-      <form class="name-form">
+      <div class="name-quantity-container">
+
         <mat-form-field class="name-line">
-          <input matInput placeholder="Название" >
+          <mat-label>Название</mat-label>
+          <input matInput [ngModel]="selectedBook?.title">
         </mat-form-field>
-      </form>
-      <form class="count-form">
-        <mat-form-field class="count-line">
-          <input matInput placeholder="Кол-во книг" >
+
+        <mat-form-field class="quantity-line">
+          <mat-label>Кол-во книг</mat-label>
+          <input matInput [ngModel]="selectedBook?.quantity">
         </mat-form-field>
-      </form>
-        <mat-form-field class="description-form">
+
+      </div>
+      <mat-form-field class="description-form">
         <mat-label>Описание</mat-label>
-        <textarea matInput rows="10"></textarea>
+        <textarea matInput rows="10" [ngModel]="selectedBook?.description"></textarea>
       </mat-form-field>
+
     </div>
-  <div class="example-button-row">
-    <button mat-raised-button>Cохранить </button>
+    <div class="example-button-row">
+      <button mat-raised-button>Cохранить</button>
+    </div>
   </div>
-  </div> 
 </div>
