@@ -1,4 +1,4 @@
-import {Component, Inject, OnInit} from '@angular/core';
+import {Component, Inject, Input, OnInit} from '@angular/core';
 import {Router, RouterModule} from "@angular/router";
 import {MatGridList, MatGridTile} from "@angular/material/grid-list";
 import {MatCardContent, MatCardModule, MatCardTitle} from "@angular/material/card";
@@ -33,6 +33,7 @@ import {CustomMatPaginatorIntl} from "../custom-materials/CustomMatPaginatorIntl
   ]
 })
 export class CatalogueComponent {
+  filteredBooks: GetBookResponse[] =[];
   constructor(private router: Router, private bookService: BookService, @Inject(BorrowedBooksService) private bBook: BorrowedBooksService) {
   }
   booksAmount: bigint = 100n;
@@ -64,9 +65,15 @@ export class CatalogueComponent {
     this.currentPage = event.pageIndex;
     console.log(event);
   }
-  // addBook(){
-  //   this.bBook.addBook();
-  // }
-
+  filterResults(text: string) {
+    if (!text) {
+      this.cards = this.filteredBooks;
+      return;
+    }
+  
+    this.cards = this.filteredBooks.filter(
+      this.filteredBooks => this.filteredBooks?.title.toLowerCase().includes(text.toLowerCase())
+    );
+  }
   checkboxes = ['Checkbox 1', 'Checkbox 2', 'Checkbox 3', 'Checkbox 4', 'Checkbox 5'];
 }
