@@ -37,11 +37,12 @@
           <img mat-card-image class="book-card-img" src="/assets/media/Книга (1).png" alt="Photo of book">
           <mat-card-content class="description-of-the-book">
             <p>{{book?.title}}</p>
+            
           </mat-card-content>
         </mat-card>  
     </div>
     <div class="button-container">
-        <button type="submit" class="btn">Взять книгу</button>
+        <button class="btn" (click)="addLoanBook()">Взять книгу</button>
     </div>
   </div>
   

@@ -12,21 +12,21 @@ export class BorrowedBooksService {
 
   constructor(private http: HttpClient) { }
 
- // cards: CreateLoanResponse[] = [];
+ cards: CreateLoanResponse[] = [];
 
-  // addBook(){
-  //   let loan=new CreateLoanResponse(1);
-  //   console.log(loan.bookId);
-  //   this.createLoan(loan).subscribe({
-  //     next: (token) => {
-  //       console.log("tts");
-  //     },
-  //     error: (error) => {
-  //       // выводит код ошибки, тут обычно 403 если неправильный логин или пароль
-  //       console.log(`Error: ${error.status}`);
-  //     }
-  //   });;
-  // }
+  addBook(loan: CreateLoanResponse){
+    // let loan=new CreateLoanResponse(1);
+    console.log(loan.bookId);
+    this.createLoan(loan).subscribe({
+      next: () => {
+        console.log("success message from addBook");
+      },
+      error: (error) => {
+        // выводит код ошибки, тут обычно 403 если неправильный логин или пароль
+        console.log(`Error: ${error.status}`);
+      }
+    });
+  }
   createLoan(createLoanResponse: CreateLoanResponse): Observable<{ books: GetBookResponse[] }> {
     const headers = new HttpHeaders().set('Authorization', 'Bearer ' + localStorage.getItem('token'));
     console.log("created loan")
