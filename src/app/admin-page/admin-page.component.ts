@@ -7,6 +7,9 @@ import {MatChipListbox, MatChipOption} from "@angular/material/chips";
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {FormsModule} from '@angular/forms';
+import {MatButtonModule} from '@angular/material/button';
+import {MatDividerModule} from '@angular/material/divider';
+=======
 import {MatIconModule} from '@angular/material/icon';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatButtonModule} from '@angular/material/button';
@@ -18,7 +21,7 @@ import {ScrollingModule} from '@angular/cdk/scrolling';
   standalone: true,
   providers: [provideNativeDateAdapter()],
   imports: [MatCardModule, MatDatepickerModule, MatChipListbox, MatChipOption,MatInputModule,
-    MatFormFieldModule,FormsModule,MatTooltipModule, MatIconModule,MatButtonModule,ScrollingModule],
+    MatFormFieldModule,FormsModule,MatTooltipModule, MatIconModule,MatButtonModule,ScrollingModule,MatButtonModule, MatDividerModule],
   templateUrl: './admin-page.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
   styleUrl: './admin-page.component.scss',

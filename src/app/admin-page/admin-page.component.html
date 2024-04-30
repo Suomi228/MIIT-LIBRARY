@@ -7,11 +7,6 @@
         <mat-chip-option >Авторы</mat-chip-option>
         <mat-chip-option >Книги</mat-chip-option>
       </mat-chip-listbox>
-      <!-- <div class="knopochki">
-        <button type="button">Автор</button>
-        <button type="button">Книга</button>
-        <button type="button">Жанр</button>
-      </div> -->
       <form class="search-form">
         <mat-form-field class="search-line" >
           <!-- <mat-label>Поиск</mat-label> -->
@@ -30,18 +25,26 @@
   <div class="info-bk">
     <div class="ID">
       <p>Информация</p>
-      <span>Book ID</span>
-      <aside>...</aside>
-      <main>...</main>
+      <div class="book-id">
+        <span>Book ID </span>
+      </div>
+      <form class="name-form">
+        <mat-form-field class="name-line">
+          <input matInput placeholder="Название" >
+        </mat-form-field>
+      </form>
+      <form class="count-form">
+        <mat-form-field class="count-line">
+          <input matInput placeholder="Кол-во книг" >
+        </mat-form-field>
+      </form>
+        <mat-form-field class="description-form">
+        <mat-label>Описание</mat-label>
+        <textarea matInput rows="10"></textarea>
+      </mat-form-field>
     </div>
-    <div class="discription">
-      <span>Описание</span>
-      <aside>...</aside>
-      <main>...</main>
-    </div>
-    <div class="count">
-      <span>Кол-во книг</span>
-    </div>
-    <button type="button">Сохранить</button>
+  <div class="example-button-row">
+    <button mat-raised-button>Cохранить </button>
   </div>
+  </div> 
 </div>
