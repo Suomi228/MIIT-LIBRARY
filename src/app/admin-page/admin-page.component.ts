@@ -9,14 +9,22 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {FormsModule} from '@angular/forms';
 import {MatButtonModule} from '@angular/material/button';
 import {MatDividerModule} from '@angular/material/divider';
+=======
+import {MatIconModule} from '@angular/material/icon';
+import {MatTooltipModule} from '@angular/material/tooltip';
+import {MatButtonModule} from '@angular/material/button';
+import {ChangeDetectionStrategy} from '@angular/core';
+import {ScrollingModule} from '@angular/cdk/scrolling';
 
 @Component({
   selector: 'app-admin-page',
   standalone: true,
   providers: [provideNativeDateAdapter()],
-  imports: [MatButtonModule, MatDividerModule, MatCardModule, MatDatepickerModule, MatChipListbox, MatChipOption,MatInputModule,MatFormFieldModule,FormsModule],
+  imports: [MatCardModule, MatDatepickerModule, MatChipListbox, MatChipOption,MatInputModule,
+    MatFormFieldModule,FormsModule,MatTooltipModule, MatIconModule,MatButtonModule,ScrollingModule,MatButtonModule, MatDividerModule],
   templateUrl: './admin-page.component.html',
-  styleUrl: './admin-page.component.scss'
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  styleUrl: './admin-page.component.scss',
 })
 export class AdminPageComponent {
   selected: Date | null | undefined;
@@ -27,6 +35,7 @@ export class AdminPageComponent {
   getUrl() {
     return "url('http://estringsoftware.com/wp-content/uploads/2017/07/estring-header-lowsat.jpg')";
   }
+  items = Array.from({length: 100000}).map((_, i) => `Item #${i}`);
 }
 
 

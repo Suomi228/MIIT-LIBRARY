@@ -8,17 +8,17 @@
         <mat-chip-option >Книги</mat-chip-option>
       </mat-chip-listbox>
       <form class="search-form">
-        <mat-form-field class="search-line">
+        <mat-form-field class="search-line" >
+          <!-- <mat-label>Поиск</mat-label> -->
           <input matInput placeholder="Поиск" >
+          <button  matSuffix mat-icon-button  aria-label="Search">
+            <mat-icon>search</mat-icon>
+          </button>
         </mat-form-field>
       </form>
-      <div class="scroll"> 
-        <div class="container">
-          <div class="slide">Пупкин Залупкин</div>
-          <div class="slide">Пушкин Калатушкин</div>
-          <div class="slide">Дант'ass</div>
-        </div>
-      </div>
+      <cdk-virtual-scroll-viewport appendOnly itemSize="50" class="viewport">
+        <div *cdkVirtualFor="let item of items" class="item">{{item}}</div>
+      </cdk-virtual-scroll-viewport>
     </div>
   </div>
 
