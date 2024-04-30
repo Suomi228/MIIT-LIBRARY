@@ -1,0 +1,50 @@
+<div class="background">
+  <div class="choose-bk">
+    <div class="filter">
+      <p>Фильтры</p>
+      <mat-chip-listbox aria-label="Color selection">
+        <mat-chip-option >Жанры</mat-chip-option>
+        <mat-chip-option >Авторы</mat-chip-option>
+        <mat-chip-option >Книги</mat-chip-option>
+      </mat-chip-listbox>
+      <form class="search-form">
+        <mat-form-field class="search-line" >
+          <!-- <mat-label>Поиск</mat-label> -->
+          <input matInput placeholder="Поиск" >
+          <button  matSuffix mat-icon-button  aria-label="Search">
+            <mat-icon>search</mat-icon>
+          </button>
+        </mat-form-field>
+      </form>
+      <cdk-virtual-scroll-viewport appendOnly itemSize="50" class="viewport">
+        <div *cdkVirtualFor="let item of items" class="item">{{item}}</div>
+      </cdk-virtual-scroll-viewport>
+    </div>
+  </div>
+
+  <div class="info-bk">
+    <div class="ID">
+      <p>Информация</p>
+      <div class="book-id">
+        <span>Book ID </span>
+      </div>
+      <form class="name-form">
+        <mat-form-field class="name-line">
+          <input matInput placeholder="Название" >
+        </mat-form-field>
+      </form>
+      <form class="count-form">
+        <mat-form-field class="count-line">
+          <input matInput placeholder="Кол-во книг" >
+        </mat-form-field>
+      </form>
+        <mat-form-field class="description-form">
+        <mat-label>Описание</mat-label>
+        <textarea matInput rows="10"></textarea>
+      </mat-form-field>
+    </div>
+  <div class="example-button-row">
+    <button mat-raised-button>Cохранить </button>
+  </div>
+  </div> 
+</div>
