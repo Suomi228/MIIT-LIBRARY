@@ -39,10 +39,6 @@
                    aria-label="Select page"
                    (page)="onPageEvent($event)">
     </mat-paginator>
-    <form>
-      <input type="text" placeholder="Filter by city">
-      <button class="primary" type="button" (click)="filterResults(filter.value) >Search</button>
-    </form>
     <div class="cards_container">
       <mat-card class="book-card" *ngFor="let card of filteredBooks" [routerLink]="['/details', card.id]">
         <img mat-card-image class="book-card-img" src="/assets/media/Книга (1).png" alt="Photo of book">
