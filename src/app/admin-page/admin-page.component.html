@@ -1,0 +1,50 @@
+<div class="background">
+  <div class="choose-bk">
+    <div class="filter">
+      <p>Фильтры</p>
+      <mat-chip-listbox aria-label="Color selection">
+        <mat-chip-option >Жанры</mat-chip-option>
+        <mat-chip-option >Авторы</mat-chip-option>
+        <mat-chip-option >Книги</mat-chip-option>
+      </mat-chip-listbox>
+      <form class="search-form">
+        <mat-form-field class="search-line">
+          <input matInput placeholder="Поиск" >
+        </mat-form-field>
+      </form>
+      <div class="scroll"> 
+        <div class="container">
+          <div class="slide">Пупкин Залупкин</div>
+          <div class="slide">Пушкин Калатушкин</div>
+          <div class="slide">Дант'ass</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="info-bk">
+    <div class="ID">
+      <p>Информация</p>
+      <div class="book-id">
+        <span>Book ID </span>
+      </div>
+      <form class="name-form">
+        <mat-form-field class="name-line">
+          <input matInput placeholder="Название" >
+        </mat-form-field>
+      </form>
+      <form class="count-form">
+        <mat-form-field class="count-line">
+          <input matInput placeholder="Кол-во книг" >
+        </mat-form-field>
+      </form>
+        <mat-form-field class="description-form">
+        <mat-label>Описание</mat-label>
+        <textarea matInput rows="10"></textarea>
+      </mat-form-field>
+    </div>
+  <div class="example-button-row">
+    <button mat-raised-button>Cохранить </button>
+  </div>
+  </div> 
+</div>
