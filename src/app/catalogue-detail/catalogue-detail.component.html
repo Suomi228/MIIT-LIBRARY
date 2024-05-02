@@ -1,5 +1,5 @@
-
 <div class="main-container">
+  <div class="sub-container">
     <div class="categories_container">
       <ul>
         <li><a href="#">Математика</a></li>
@@ -31,18 +31,19 @@
       </ul>
     </div>
     <div class="cards_page_container">
- 
+
       <div class="cards_container">
         <mat-card class="book-card">
           <img mat-card-image class="book-card-img" src="/assets/media/Книга (1).png" alt="Photo of book">
           <mat-card-content class="description-of-the-book">
-            <p>{{book?.title}}</p>
-            
+            <p>{{ book?.title }}</p>
+
           </mat-card-content>
-        </mat-card>  
-    </div>
-    <div class="button-container">
+        </mat-card>
+      </div>
+      <div class="button-container">
         <button class="btn" (click)="addLoanBook()">Взять книгу</button>
+      </div>
     </div>
   </div>
-  
+</div>
