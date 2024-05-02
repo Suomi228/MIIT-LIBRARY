@@ -11,6 +11,10 @@ import { CatalogueComponent } from '../catalogue/catalogue.component';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
+  constructor(private router: Router) {}
 
+  isRoute(route: string) {
+    return this.router.url === route;
+  }
 
 }
