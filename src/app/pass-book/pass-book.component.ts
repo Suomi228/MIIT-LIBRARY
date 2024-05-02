@@ -18,7 +18,7 @@ import {provideNativeDateAdapter} from '@angular/material/core';
   providers: [BorrowedBooksService,provideNativeDateAdapter()]
 })
 export class PassBookComponent {
-  
+
    constructor(private bBook: BorrowedBooksService){}
    cards: GetAllLoansResponse = new GetAllLoansResponse([]);
   //  card: GetLoanResponse = new GetLoanResponse(1, 1);
@@ -30,7 +30,11 @@ export class PassBookComponent {
      this.bBook.getLoan().subscribe(response => {
        console.log(response);
        this.cards = response;
+       response.loans.forEach(loan => {
+         loan.loanDate = new Date(loan.loanDate);
+       });
        console.log(this.cards);
+       console.log(typeof this.cards.loans[0].loanDate);
      });
    }
 }

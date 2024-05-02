@@ -6,7 +6,7 @@
       </mat-card>
       <div class="description">
         <p>{{card.book.title}}</p>
-        <p>Книга взята : {{card.loanDate.getDate}}</p>
+        <p>Книга взята : {{card.loanDate.getDate()}}.{{card.loanDate.getMonth()+1}}.{{card.loanDate.getFullYear()}}</p>
         <p>Необходимо сдать книгу до : 11.02.2024</p>
         <p> Осталось: 20 дней </p>
       </div>
