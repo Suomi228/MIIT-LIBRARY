@@ -40,7 +40,7 @@
                    (page)="onPageEvent($event)">
     </mat-paginator>
     <div class="cards_container">
-      <mat-card class="book-card" *ngFor="let card of filteredBooks" [routerLink]="['/details', card.id]">
+      <mat-card class="book-card" *ngFor="let card of cards" [routerLink]="['/details', card.id]">
         <img mat-card-image class="book-card-img" src="/assets/media/Книга (1).png" alt="Photo of book">
         <mat-card-content class="description-of-the-book">
           <a [routerLink]="['/details', card.id]">{{ card.title }}</a>

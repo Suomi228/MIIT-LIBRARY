@@ -4,7 +4,8 @@ import { Observable } from 'rxjs';
 import { GetBookResponse } from '../catalogue/requests/getBookRequest';
 import {BASE_API_URL} from "../constants";
 import { CreateLoanResponse } from '../catalogue/requests/createLoanRequest';
-import { GetLoanResponse } from '../catalogue/responses';
+import { GetAllLoansResponse, GetLoanResponse } from '../catalogue/requests/responses';
+import { InfoResponse } from './responses/infoResponse';
 @Injectable({
   providedIn: 'root'
 })
@@ -27,13 +28,13 @@ export class BorrowedBooksService {
       }
     });
   }
-  createLoan(createLoanResponse: CreateLoanResponse): Observable<{ books: GetBookResponse[] }> {
+  createLoan(createLoanResponse: CreateLoanResponse){
     const headers = new HttpHeaders().set('Authorization', 'Bearer ' + localStorage.getItem('token'));
     console.log("created loan")
-    return this.http.post<{ books: GetBookResponse[] }>(BASE_API_URL + "loan/create",createLoanResponse, {headers: headers});
+    return this.http.post<InfoResponse>(BASE_API_URL + "loan/create",createLoanResponse, {headers: headers});
   }
   getLoan() {
     const headers = new HttpHeaders().set('Authorization', 'Bearer ' + localStorage.getItem('token'));
-    return this.http.get<GetLoanResponse>(BASE_API_URL + "loan/get/" + 2, {headers: headers});
+    return this.http.get<GetAllLoansResponse>(BASE_API_URL + "loan/get", {headers: headers});
   }
 }
