@@ -1,3 +1,6 @@
+# Status
+Dev branch [![Docker Image CI dev](https://github.com/Suomi228/MIIT-LIBRARY/actions/workflows/docker-image-dev.yml/badge.svg?branch=dev)](https://github.com/Suomi228/MIIT-LIBRARY/actions/workflows/docker-image-dev.yml)
+Main branch [![Docker Image CI](https://github.com/Suomi228/MIIT-LIBRARY/actions/workflows/docker-image.yml/badge.svg?branch=main)](https://github.com/Suomi228/MIIT-LIBRARY/actions/workflows/docker-image.yml)
 # MIITLIBRARY
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.1.
