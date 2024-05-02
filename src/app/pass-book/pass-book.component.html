@@ -1,45 +1,14 @@
 <div class="main-conteiner">
-  <div class="conteiner">
-    <div class="card-11">
-      <div class="button">
-        <mat-card class="card-1">
-          <mat-card-content>
-          </mat-card-content>
-        </mat-card>
-      </div>
+  <div class="white-conteiner">
+    <div class="card-container" *ngFor="let card of cards.loans">
+      <mat-card class="card-image-container">
+        <img mat-card-image class="book-card-img" src="/assets/media/Книга (1).png" alt="Photo of book">
+      </mat-card>
       <div class="description">
-        <p>Название книги</p>
-        <p>Книга взята : 11.01.2024</p>
+        <p>{{card.book.title}}</p>
+        <p>Книга взята : {{card.loanDate.getDate()}}.{{card.loanDate.getMonth()+1}}.{{card.loanDate.getFullYear()}}</p>
         <p>Необходимо сдать книгу до : 11.02.2024</p>
         <p> Осталось: 20 дней </p>
-      </div>
-    </div>
-    <div class="card-11">
-      <div class="button">
-        <mat-card class="card-1">
-          <mat-card-content>
-          </mat-card-content>
-        </mat-card>
-      </div>
-      <div class="description">
-        <p>Название книги</p>
-        <p>Книга взята : 10.03.2024</p>
-        <p>Необходимо сдать книгу до : 11.04.2024</p>
-        <p> Осталось: 0 дней </p>
-      </div>
-    </div>
-    <div class="card-11">
-      <div class="button">
-        <mat-card class="card-1">
-          <mat-card-content>
-          </mat-card-content>
-        </mat-card>
-      </div>
-      <div class="description">
-        <p>Название книги</p>
-        <p>Книга взята : 24.04.2024</p>
-        <p>Необходимо сдать книгу до : 25.05.2024</p>
-        <p> Осталось: 30 дней </p>
       </div>
     </div>
   </div>

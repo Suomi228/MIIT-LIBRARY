@@ -1,1 +1,48 @@
-<p>catalogue-detail works! {{book?.id}}</p>
+
+<div class="main-container">
+    <div class="categories_container">
+      <ul>
+        <li><a href="#">Математика</a></li>
+        <li><a href="#">Физика</a></li>
+        <li><a href="#">Теоретическая механика</a></li>
+        <li><a href="#">Инженерно-технические науки</a></li>
+        <li>
+          <a href="#">Ветеринария и сельское хозяйство</a>
+        </li>
+        <li><a href="#">Информатика</a>
+        </li>
+        <li><a href="#">Образовательная роботехника</a>
+        </li>
+        <li><a href="#">Русский как иностранный</a>
+        </li>
+        <li><a href="#">Право. Юридические науки</a>
+        </li>
+        <li><a href="#">Балет. Танец. Хореография</a>
+        </li>
+        <li><a href="#">Технологии легкой промышленности</a>
+        </li>
+        <li><a href="#">Экономика и менеджемент</a>
+        </li>
+        <li>
+          <a href="#">Военное дело</a>
+        </li>
+        <li><a href="#">География</a>
+        </li>
+      </ul>
+    </div>
+    <div class="cards_page_container">
+ 
+      <div class="cards_container">
+        <mat-card class="book-card">
+          <img mat-card-image class="book-card-img" src="/assets/media/Книга (1).png" alt="Photo of book">
+          <mat-card-content class="description-of-the-book">
+            <p>{{book?.title}}</p>
+            
+          </mat-card-content>
+        </mat-card>  
+    </div>
+    <div class="button-container">
+        <button class="btn" (click)="addLoanBook()">Взять книгу</button>
+    </div>
+  </div>
+  

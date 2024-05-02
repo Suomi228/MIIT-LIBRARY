@@ -1,4 +1,4 @@
-import {Component, Inject, OnInit} from '@angular/core';
+import {Component, Inject, Input, OnInit} from '@angular/core';
 import {Router, RouterModule} from "@angular/router";
 import {MatGridList, MatGridTile} from "@angular/material/grid-list";
 import {MatCardContent, MatCardModule, MatCardTitle} from "@angular/material/card";
@@ -64,9 +64,5 @@ export class CatalogueComponent {
     this.currentPage = event.pageIndex;
     console.log(event);
   }
-  // addBook(){
-  //   this.bBook.addBook();
-  // }
-
   checkboxes = ['Checkbox 1', 'Checkbox 2', 'Checkbox 3', 'Checkbox 4', 'Checkbox 5'];
 }
