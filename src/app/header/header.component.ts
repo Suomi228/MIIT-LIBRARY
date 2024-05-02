@@ -1,17 +1,18 @@
-import { Component } from '@angular/core';
-import { Router, RouterModule } from '@angular/router';
-import { HomePageComponent } from '../home-page/home-page.component';
-import { CatalogueComponent } from '../catalogue/catalogue.component';
+import {Component} from '@angular/core';
+import {Router, RouterModule} from '@angular/router';
+import {HomePageComponent} from '../home-page/home-page.component';
+import {CatalogueComponent} from '../catalogue/catalogue.component';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [RouterModule,HomePageComponent,CatalogueComponent],
+  imports: [RouterModule, HomePageComponent, CatalogueComponent],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
-  constructor(private router: Router) {}
+  constructor(private router: Router) {
+  }
 
   isRoute(route: string) {
     return this.router.url === route;

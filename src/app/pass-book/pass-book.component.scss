@@ -2,8 +2,7 @@
 .main-conteiner {
   background-image: url('/assets/media/tile_background 3 (1).png');
   background-repeat: repeat;
-  background-size: auto;
-  background-clip: border-box;
+  background-size: contain;
   padding: 1em;
   min-height: 100vh;
 }
@@ -39,4 +38,5 @@
 }
 p{
 font-family: 'Navigo';
+font-size: 2vh;
 }
