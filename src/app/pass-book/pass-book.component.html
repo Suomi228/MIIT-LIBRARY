@@ -1,12 +1,9 @@
 <div class="main-conteiner">
   <div class="white-conteiner">
     <div class="card-container" *ngFor="let card of cards.loans">
-      <div class="card-image-container">
-        <mat-card class="card-image">
-          <mat-card-content>
-          </mat-card-content>
-        </mat-card>
-      </div>
+      <mat-card class="card-image-container">
+        <img mat-card-image class="book-card-img" src="/assets/media/Книга (1).png" alt="Photo of book">
+      </mat-card>
       <div class="description">
         <p>{{card.book.title}}</p>
         <p>Книга взята : {{card.loanDate.getDate}}</p>

@@ -10,8 +10,6 @@
   background-color: white;
   display: block;
   flex-direction: column;
-  //justify-content: space-between;
-  //margin-top: 1em;
   border-radius: 10px;
 }
 
@@ -35,13 +33,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.card-image{
-  display: flex;
-  width: 300px;
-  height: 400px;
-  border: 1px solid rgba(22, 62, 115, 1);
+  padding: 1em;
 }
 p{
 font-family: 'Navigo';
