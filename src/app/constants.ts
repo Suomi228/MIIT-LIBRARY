@@ -6,22 +6,22 @@ export let BASE_API_URL = `http://${REMOTE_API_URL}/api/v1/`;
 export const NAV_BAR ={
     menus: [
         {
-            path:'home',
+            path:'/home',
             text:'Главная',
             roles:['USER','ADMIN']
         },
         {
-            path:'catalogue',
+            path:'/catalogue',
             text:'Каталог',
             roles:['USER']
         },
         {
-            path:'pass-book',
+            path:'/pass-book',
             text:'Срок сдачи книги',
             roles:['USER']
         },
         {
-            path:'admin',
+            path:'/admin',
             text:'Админ панель',
             roles:['ADMIN']
         }
