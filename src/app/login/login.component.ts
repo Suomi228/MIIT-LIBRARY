@@ -2,9 +2,6 @@ import { Component, inject } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { AuthService } from '../services/auth.service';
-import {MatIconModule} from '@angular/material/icon';
-import {MatDividerModule} from '@angular/material/divider';
-import {MatButtonModule} from '@angular/material/button';
 import {HttpClientModule} from "@angular/common/http";
 @Component({
   selector: 'app-login',
@@ -12,9 +9,6 @@ import {HttpClientModule} from "@angular/common/http";
   imports: [
     CommonModule,
     ReactiveFormsModule,
-    MatButtonModule,
-    MatDividerModule,
-    MatIconModule,
     HttpClientModule
   ],
   template: `
@@ -27,7 +21,6 @@ import {HttpClientModule} from "@angular/common/http";
             <label for="password">Пароль</label>
             <input id="password" type="primary" formControlName="password">
             <div style="text-align:center">
-              <!-- <button mat-flat-button color="primary">Войти</button> -->
                <button type="submit" class="log-btn">Войти</button>
             </div>
             <div style="margin-top: 50px;">

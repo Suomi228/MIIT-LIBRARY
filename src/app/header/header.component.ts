@@ -4,7 +4,6 @@ import {HomePageComponent} from '../home-page/home-page.component';
 import {CatalogueComponent} from '../catalogue/catalogue.component';
 import {NAV_BAR} from '../constants';
 import {CommonModule, NgFor} from '@angular/common';
-import {interval, switchMap, window} from 'rxjs';
 import {AuthService} from "../services/auth.service";
 import {HttpClientModule} from "@angular/common/http";
 import {RoleService} from "../services/reactive";

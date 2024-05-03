@@ -5,8 +5,5 @@
        [routerLink]="['/login']" [routerLinkActive]="['is-active']">
     <div class="menu" *ngFor="let item of filteredMenus">
       <a [routerLink]="[item.path]" [routerLinkActive]="['is-active']" [class.focused]="isRoute(item.path)">{{item.text}}</a>
-      <!-- <a [routerLink]="['/catalogue']" [routerLinkActive]="['is-active']" [class.focused]="isRoute('/catalogue')">Каталог</a>
-      <a [routerLink]="['/pass-book']" [routerLinkActive]="['is-active']" [class.focused]="isRoute('/pass-book')">Срок сдачи книги</a>
-      <a [routerLink]="['/admin']" [routerLinkActive]="['is-active']" [class.focused]="isRoute('/admin')">Админ панель</a> -->
     </div>
 </div>
