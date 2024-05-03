@@ -1,4 +1,4 @@
-name: Docker Image CI
+name: Docker build and deploy
 
 on:
   push:
@@ -25,6 +25,11 @@ jobs:
         push: true
         tags: docker.io/yobange/angular-library:latest
 
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
     - name: Deploy to server
       uses: appleboy/ssh-action@master
       with:
@@ -34,6 +39,6 @@ jobs:
         script: |
           docker stop angular-container
           docker rm angular-container
-          docker rmi angular-library:latest
+          docker rmi yobange/angular-library:latest
           docker pull docker.io/yobange/angular-library:latest
           docker run -d -p 80:80 --name angular-container docker.io/yobange/angular-library:latest
