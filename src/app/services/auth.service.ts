@@ -34,6 +34,7 @@ export class AuthService {
           console.log(`Token received: ${token.token}  ${token.role}`);
           localStorage.setItem('token', token.token);
           localStorage.setItem('role', token.role);
+          console.log(localStorage.getItem('role'))
           this.router.navigate(['/home']);
         },
         error: (error) => {
