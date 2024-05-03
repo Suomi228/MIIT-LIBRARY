@@ -4,6 +4,7 @@ import {HomePageComponent} from '../home-page/home-page.component';
 import {CatalogueComponent} from '../catalogue/catalogue.component';
 import { NAV_BAR } from '../constants';
 import { CommonModule, NgFor } from '@angular/common';
+import { interval, switchMap, window } from 'rxjs';
 
 @Component({
   selector: 'app-header',
@@ -13,7 +14,6 @@ import { CommonModule, NgFor } from '@angular/common';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
-// NEW COMMIT
   menus:any [] = [];
   filteredMenus:any [] = [];
   role: any = '';
@@ -23,17 +23,19 @@ export class HeaderComponent {
     if (token!= null){
         this.role = localStorage.getItem('role')
     }
+    else{
+      this.filteredMenus=this.menus
+    }
 
     this.menus.forEach((element: any)=>{
       const userRole = element.roles.some((role: any)=>role == this.role)
-      console.log(userRole)
-      if (userRole!= undefined){
+      console.log('User-role'+userRole)
+      if (userRole!=false){
         this.filteredMenus.push(element);
       }
     });
-
   }
-// NEW COMMIT
+  
 
   isRoute(route: string) {
     return this.router.url === route;

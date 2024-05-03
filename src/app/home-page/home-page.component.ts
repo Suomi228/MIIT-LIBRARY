@@ -13,10 +13,6 @@ import {provideNativeDateAdapter} from '@angular/material/core';
   styleUrl: './home-page.component.scss'
 })
 export class HomePageComponent {
-  selected: Date | null | undefined;
   constructor(private router: Router) { }
-  zalupa(){
-    console.log("ухй")
-  }
 }
 
