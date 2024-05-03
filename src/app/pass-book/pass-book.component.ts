@@ -1,27 +1,22 @@
 import { NgFor } from '@angular/common';
-import { Component, Inject } from '@angular/core';
+import { Component } from '@angular/core';
 import { BorrowedBooksService } from '../services/borrowed-books.service';
 import { HttpClientModule } from '@angular/common/http';
-import { CreateLoanResponse } from '../catalogue/requests/createLoanRequest';
-import {MatCard, MatCardContent, MatCardTitle} from "@angular/material/card";
-import {GetAllLoansResponse, GetLoanResponse} from "../catalogue/requests/responses";
-import {MatDatepickerModule} from '@angular/material/datepicker';
-import {MatCardModule} from '@angular/material/card';
-import {provideNativeDateAdapter} from '@angular/material/core';
+import {MatCard} from "@angular/material/card";
+import {GetAllLoansResponse} from "../catalogue/requests/responses";
 
 @Component({
   selector: 'app-pass-book',
   standalone: true,
-  imports: [NgFor, HttpClientModule, MatCard, MatCardContent, MatCardTitle, MatCardModule, MatDatepickerModule],
+  imports: [NgFor, HttpClientModule, MatCard],
   templateUrl: './pass-book.component.html',
   styleUrl: './pass-book.component.scss',
-  providers: [BorrowedBooksService,provideNativeDateAdapter()]
+  providers: [BorrowedBooksService]
 })
 export class PassBookComponent {
 
    constructor(private bBook: BorrowedBooksService){}
    cards: GetAllLoansResponse = new GetAllLoansResponse([]);
-  //  card: GetLoanResponse = new GetLoanResponse(1, 1);
    ngOnInit(): void {
      this.getBooks();
    }

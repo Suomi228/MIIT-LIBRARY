@@ -5,6 +5,7 @@ import {CatalogueComponent} from "./catalogue/catalogue.component";
 import { PassBookComponent } from './pass-book/pass-book.component';
 import { CatalogueDetailComponent } from './catalogue-detail/catalogue-detail.component';
 import {AdminPageComponent} from "./admin-page/admin-page.component";
+import { RoleGuard } from './role.guard';
 
 export const routes: Routes = [
   // obama.tplinkdns.com + path
@@ -14,5 +15,5 @@ export const routes: Routes = [
   {path: "catalogue", component: CatalogueComponent},
   {path: "pass-book", component: PassBookComponent},
   {path: "details/:id", component: CatalogueDetailComponent},
-  {path: "admin", component: AdminPageComponent}
+  {path: "admin", component: AdminPageComponent, canActivate: [RoleGuard]}
 ];

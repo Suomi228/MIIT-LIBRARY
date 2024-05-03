@@ -38,7 +38,6 @@ export class CatalogueDetailComponent {
   }
   addLoanBook(){
     this.borrowedBookService.addBook(this.loan);
-    // console.log(this.loan.bookId)
   }
   
 }

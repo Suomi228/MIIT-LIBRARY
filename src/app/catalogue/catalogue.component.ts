@@ -1,4 +1,4 @@
-import {Component, Inject, Input, OnInit} from '@angular/core';
+import {Component, Inject} from '@angular/core';
 import {Router, RouterModule} from "@angular/router";
 import {MatGridList, MatGridTile} from "@angular/material/grid-list";
 import {MatCardContent, MatCardModule, MatCardTitle} from "@angular/material/card";

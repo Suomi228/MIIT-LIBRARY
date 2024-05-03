@@ -4,13 +4,14 @@ import {JwtToken} from "./jwtToken";
 import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {BASE_API_URL} from "../constants";
 import {Router} from "@angular/router";
+import {RoleService} from "./reactive";
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
 
-  constructor(private http: HttpClient, private router: Router) {
+  constructor(private http: HttpClient, private router: Router, private roleService: RoleService) {
   }
 
   private postNoAuth(packet: any, endpoint: string) {
@@ -25,7 +26,6 @@ export class AuthService {
     const headers = new HttpHeaders().set('Authorization', 'Bearer ' + localStorage.getItem('token'));
     return this.http.post<any>(BASE_API_URL + endpoint, packet, {headers: headers});
   }
-
   submitApplication(email: string, password: string) {
     console.log(`Homes application received: email: ${email}, password: ${password}.`);
     this.postNoAuth(new UserLogin(email, password), 'auth/authentication')
@@ -34,6 +34,8 @@ export class AuthService {
           console.log(`Token received: ${token.token}  ${token.role}`);
           localStorage.setItem('token', token.token);
           localStorage.setItem('role', token.role);
+          this.roleService.emitRoleChange(token.role);
+          console.log(localStorage.getItem('role'))
           this.router.navigate(['/home']);
         },
         error: (error) => {

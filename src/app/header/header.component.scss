@@ -13,18 +13,18 @@ img{
     height: 70px;
 }
 
-.topnav>a{
-    // border-style: bold;
-    // border: solid;
+.menu{
     margin-top: 2em;
     margin-bottom: 1em;
+   
+}
+.menu>a{
     padding-left: 2em;
     font-size: 1em;
     text-decoration: none;
     color: gray;
     font-family: Navigo;
-
 }
-.topnav>a:focus {
+.menu>a.focused{
     color: #163E73;
 }

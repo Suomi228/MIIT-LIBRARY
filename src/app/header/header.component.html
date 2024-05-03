@@ -3,8 +3,7 @@
 
   <img class="logo" src="https://miit.ru/content/T_rus.svg?id_wm=867987" alt="Транспортный университет"
        [routerLink]="['/login']" [routerLinkActive]="['is-active']">
-  <a [routerLink]="['/home']" [routerLinkActive]="['is-active']">Главная</a>
-  <a [routerLink]="['/catalogue']" [routerLinkActive]="['is-active']">Каталог</a>
-  <a [routerLink]="['/pass-book']" [routerLinkActive]="['is-active']">Срок сдачи книги</a>
-  <a [routerLink]="['/admin']" [routerLinkActive]="['is-active']">Админ панель</a>
+    <div class="menu" *ngFor="let item of filteredMenus">
+      <a [routerLink]="[item.path]" [routerLinkActive]="['is-active']" [class.focused]="isRoute(item.path)">{{item.text}}</a>
+    </div>
 </div>
