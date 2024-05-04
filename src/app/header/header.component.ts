@@ -7,12 +7,15 @@ import {CommonModule, NgFor} from '@angular/common';
 import {AuthService} from "../services/auth.service";
 import {HttpClientModule} from "@angular/common/http";
 import {RoleService} from "../services/reactive";
+import {MatBadgeModule} from '@angular/material/badge';
+import {MatIconModule} from '@angular/material/icon';
+
 
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [RouterModule, HomePageComponent, CatalogueComponent, NgFor, CommonModule, HttpClientModule],
+  imports: [RouterModule, HomePageComponent, CatalogueComponent, NgFor, CommonModule, HttpClientModule,MatBadgeModule,MatIconModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
   providers: [AuthService]

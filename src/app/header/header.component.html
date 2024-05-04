@@ -1,9 +1,11 @@
 <div class="topnav">
-
-
-  <img class="logo" src="https://miit.ru/content/T_rus.svg?id_wm=867987" alt="Транспортный университет"
-       [routerLink]="['/login']" [routerLinkActive]="['is-active']">
+  <div class="topnav-list">
+    <img class="logo" src="https://miit.ru/content/T_rus.svg?id_wm=867987" alt="Транспортный университет" [routerLink]="['/login']" [routerLinkActive]="['is-active']">
     <div class="menu" *ngFor="let item of filteredMenus">
-      <a [routerLink]="[item.path]" [routerLinkActive]="['is-active']" [class.focused]="isRoute(item.path)">{{item.text}}</a>
+        <a [routerLink]="[item.path]" [routerLinkActive]="['is-active']" [class.focused]="isRoute(item.path)">{{item.text}}</a>
     </div>
+  </div>
+  <div *ngIf="role=='ADMIN'" class="notification-container">
+      <mat-icon>notifications</mat-icon>
+  </div>
 </div>

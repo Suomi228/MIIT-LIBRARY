@@ -1,12 +1,13 @@
 .topnav {
     display: flex;
     // position: sticky;
-
+    justify-content: space-between;
     top: 0;
-    align-self: start;
+    // align-self: start;
     background-color: #ffffff;
     border-bottom-style: solid;
     border-width: 0.5px;
+    overflow: hidden;
 }
 img{
     width: 150px;
@@ -26,5 +27,23 @@ img{
     font-family: Navigo;
 }
 .menu>a.focused{
+    color: #163E73;
+}
+.notification-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 70px;
+}
+.topnav-list{
+    display: flex;
+    justify-content: flex-start;
+}
+.mat-icon {
+    font-size: 2em;
+    height: 2em;
+    width: 2em;
+    margin-top: 1em;
+    cursor: pointer;
     color: #163E73;
 }
